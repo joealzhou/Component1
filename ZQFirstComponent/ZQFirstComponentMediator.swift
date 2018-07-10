@@ -16,7 +16,8 @@ extension ZQMediator {
     
     /// 第一个组件的主导航控制器
     public func mediatorFirstComponentMainVC() -> UIViewController? {
-        let result = ZQMediator.default.perform(nameSpace: ZQComponentName, target: ZQTargetName, action: ZQActionName, params: ["title":"Home"], shouldCacheTarget: false)
-        return result as? UIViewController
+//        let result = ZQMediator.default.perform(nameSpace: ZQComponentName, target: ZQTargetName, action: ZQActionName, params: ["title":"Home"], shouldCacheTarget: false)
+        let result = FirstComponentUtils().firstComponentMainVC(params: ["title":"Home"])
+        return result
     }
 }
